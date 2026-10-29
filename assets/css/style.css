@@ -1,0 +1,197 @@
+:root {
+    --navy: #183b3b;
+    --teal: #16877b;
+    --page: #f4f7f6;
+    --muted: #71817e;
+}
+
+body {
+    background: var(--page);
+    color: #233331;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-shell {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background: var(--navy);
+    color: #fff;
+    flex: 0 0 245px;
+    padding: 26px 18px;
+}
+
+.brand {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    font-size: 15px;
+    font-weight: 700;
+    gap: 11px;
+    margin: 0 5px 42px;
+    text-decoration: none;
+}
+
+.brand small {
+    color: #b6ceca;
+    display: block;
+    font-size: 11px;
+    font-weight: 400;
+    margin-top: 3px;
+}
+
+.brand-mark {
+    align-items: center;
+    background: #d7eee9;
+    border-radius: 12px;
+    color: var(--navy);
+    display: flex;
+    font-size: 14px;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+}
+
+.sidebar .nav-link {
+    border-radius: 8px;
+    color: #c8d8d5;
+    padding: 11px 13px;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background: #285452;
+    color: #fff;
+}
+
+.logout-link {
+    background: transparent;
+    border: 0;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 35px clamp(18px, 4vw, 55px);
+}
+
+.content-heading {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    color: var(--teal);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.admin-label {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.card,
+.table-responsive {
+    border: 1px solid #e6ecea;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(24, 59, 59, 0.04);
+}
+
+.summary-card {
+    min-height: 135px;
+}
+
+.summary-number {
+    color: var(--navy);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.summary-label {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background: #f8faf9;
+    color: #526561;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.form-card {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: var(--teal);
+    border-color: var(--teal);
+}
+
+.btn-primary:hover {
+    background: #116e65;
+    border-color: #116e65;
+}
+
+.login-page {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-card {
+    max-width: 430px;
+    width: 100%;
+}
+
+@media (max-width: 760px) {
+    .app-shell {
+        display: block;
+    }
+
+    .sidebar {
+        padding: 14px;
+    }
+
+    .brand {
+        margin: 0 5px 14px;
+    }
+
+    .sidebar .nav {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 3px;
+    }
+
+    .sidebar .nav-link {
+        padding: 8px 10px;
+    }
+
+    .sidebar form {
+        margin-top: 0 !important;
+    }
+
+    .main-content {
+        padding-top: 24px;
+    }
+
+    .admin-label {
+        display: none;
+    }
+}
